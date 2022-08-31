@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "802630825067",
+    "project_id": "osha-app",
+    "storage_bucket": "osha-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802630825067:android:b87751dd3e1b95beb76d2e",
+        "android_client_info": {
+          "package_name": "com.osha.app_driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "802630825067-0j8o86grqkrm8vk44paidjdnfguq44rn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9hZbNIbA3mbDulR21aBJAF5QKnouHAY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "802630825067-0j8o86grqkrm8vk44paidjdnfguq44rn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802630825067:android:4b3222017389c023b76d2e",
+        "android_client_info": {
+          "package_name": "com.osha.app_driver_delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "802630825067-0j8o86grqkrm8vk44paidjdnfguq44rn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9hZbNIbA3mbDulR21aBJAF5QKnouHAY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "802630825067-0j8o86grqkrm8vk44paidjdnfguq44rn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
