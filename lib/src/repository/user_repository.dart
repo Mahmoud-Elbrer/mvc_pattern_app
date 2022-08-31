@@ -104,7 +104,7 @@ Future<User> getCurrentUser() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   //prefs.clear();
   if (currentUser.value.auth == null && prefs.containsKey('current_user')) {
-    currentUser.value = User.fromJSON(json.decode(await (prefs.get('current_user') as FutureOr<String>)));
+    currentUser.value = User.fromJSON(json.decode(await (prefs.get('current_user') as Future<String>)));
     currentUser.value.auth = true;
   } else {
     currentUser.value.auth = false;
@@ -118,7 +118,7 @@ Future<CreditCard> getCreditCard() async {
   CreditCard _creditCard = new CreditCard();
   SharedPreferences prefs = await SharedPreferences.getInstance();
   if (prefs.containsKey('credit_card')) {
-    _creditCard = CreditCard.fromJSON(json.decode(await (prefs.get('credit_card') as FutureOr<String>)));
+    _creditCard = CreditCard.fromJSON(json.decode(await (prefs.get('credit_card') as Future<String>)));
   }
   return _creditCard;
 }

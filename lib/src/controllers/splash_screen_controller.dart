@@ -14,10 +14,10 @@ import '../repository/user_repository.dart' as userRepo;
 class SplashScreenController extends ControllerMVC with ChangeNotifier {
   ValueNotifier<Map<String, double>> progress = new ValueNotifier(new Map());
   GlobalKey<ScaffoldState>? scaffoldKey;
-  final FirebaseMessaging firebaseMessaging = FirebaseMessaging();
+  final FirebaseMessaging? firebaseMessaging ;
   //final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
-  SplashScreenController() {
+  SplashScreenController(this.firebaseMessaging) {
     this.scaffoldKey = new GlobalKey<ScaffoldState>();
     // Should define these variables before the app loaded
     progress.value = {"Setting": 0, "User": 0};
@@ -26,8 +26,9 @@ class SplashScreenController extends ControllerMVC with ChangeNotifier {
   @override
   void initState() {
     super.initState();
-    firebaseMessaging.requestNotificationPermissions(const IosNotificationSettings(sound: true, badge: true, alert: true));
-    configureFirebase(firebaseMessaging);
+    // todo : enable this comment 
+    //firebaseMessaging!.requestNotificationPermissions(const IosNotificationSettings(sound: true, badge: true, alert: true));
+    configureFirebase(firebaseMessaging!);
     settingRepo.setting.addListener(() {
       if (settingRepo.setting.value.appName != null && settingRepo.setting.value.appName != '' && settingRepo.setting.value.mainColor != null) {
         progress.value["Setting"] = 41;
